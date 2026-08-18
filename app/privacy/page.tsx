@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Homey',
+  title: 'Privacy Policy',
   description: 'How Homey collects, uses, and protects your data.',
 };
 

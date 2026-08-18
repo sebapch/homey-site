@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Delete Your Account — Homey',
+  title: 'Delete Your Account',
   description: 'How to delete your Homey account and personal data.',
 };
 
