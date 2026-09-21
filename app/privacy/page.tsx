@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { site } from '../site';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — Homey',
@@ -17,7 +18,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 export default function PrivacyPolicyPage() {
   return (
     <div className="page">
-      <p className="updated">Last updated: March 18, 2026</p>
+      <p className="updated">Last updated: September 21, 2026</p>
       <h1>Your Data at Homey</h1>
       <p className="intro">
         We value your trust. This policy explains what information we collect, how we use it,
@@ -30,7 +31,7 @@ export default function PrivacyPolicyPage() {
           <li>You can download your data at any time.</li>
           <li>You have the &ldquo;Right to be Forgotten&rdquo; (account deletion).</li>
           <li>We never sell your personal data to third parties.</li>
-          <li>We use top-tier SSL encryption for all transfers.</li>
+          <li>We use HTTPS to protect data in transit.</li>
         </ul>
       </div>
 
@@ -54,22 +55,23 @@ export default function PrivacyPolicyPage() {
       </Section>
 
       <Section title="4. Data Sharing and Disclosure">
-        We don&apos;t sell your personal data. We only share it with trusted service providers
-        (like Supabase for storage, Mapbox for maps, and Firebase for push notifications) who
-        help us operate. In rare cases, we may share data if required by law or to protect our
-        rights.
+        We don&apos;t sell your personal data. We use service providers including Supabase for
+        accounts and storage, Mapbox for maps and address search, and Expo and Apple for push
+        notifications. Other users can see the listing details and profile information you choose
+        to publish and the messages you send them. We may disclose data when required by law.
       </Section>
 
       <Section title="5. Data Retention">
-        We store your personal data as long as your account is active. If you delete your
-        account, we will purge your personal information from our active databases within 30
-        days, unless a legal requirement dictates otherwise.
+        We retain account data while your account is active. In-app deletion removes the account
+        and associated content from our active systems before confirming completion. If a
+        technical error interrupts deletion, the app will show an error so you can retry or
+        contact us. Backups expire under our providers&apos; retention schedules; records
+        required by law may be retained.
       </Section>
 
       <Section title="6. International Data Transfers">
-        Your data may be stored in cloud servers located in various regions. We ensure that our
-        providers comply with international standards such as the EU-US Data Privacy Framework
-        to guarantee your data stays protected.
+        Service providers may process your data outside Malta. Contact us for information about
+        the safeguards that apply to a particular transfer.
       </Section>
 
       <Section title="7. Cookies and Tracking">
@@ -79,11 +81,10 @@ export default function PrivacyPolicyPage() {
       </Section>
 
       <Section title="8. Account and Data Deletion">
-        You can delete your account and all associated personal data at any time from within the
-        app (Profile &rarr; Data &amp; Privacy &rarr; Delete Account), or by requesting deletion
-        online at{' '}
-        <a href="/delete-account">homeyappmlt.com/delete-account</a>. We will confirm and process
-        the deletion within 30 days.
+        You can delete your account from within the app (Profile &rarr; Privacy &rarr;
+        Request account deletion) or request help through our{' '}
+        <a href="/delete-account">account deletion page</a>. In-app deletion confirms completion
+        only after the server finishes. Contact us if you cannot access your account.
       </Section>
 
       <Section title="9. Policy Updates">
@@ -94,8 +95,8 @@ export default function PrivacyPolicyPage() {
 
       <div className="contact">
         <p>Questions about this policy or your data?</p>
-        <a className="button" href="mailto:support@homey.mt">
-          Contact support@homey.mt
+        <a className="button" href={`mailto:${site.email}`}>
+          Contact {site.email}
         </a>
       </div>
     </div>

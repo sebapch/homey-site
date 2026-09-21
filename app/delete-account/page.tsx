@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { site } from '../site';
 
 export const metadata: Metadata = {
   title: 'Delete Your Account — Homey',
@@ -17,9 +18,11 @@ export default function DeleteAccountPage() {
       <section>
         <h2>Option 1: Delete inside the app</h2>
         <p>
-          Open Homey and go to <strong>Profile &rarr; Data &amp; Privacy &rarr; Delete
-          Account</strong>. Confirm the deletion request. Your account is deactivated
-          immediately and your personal data is scheduled for permanent removal.
+          Open Homey and go to <strong>Profile &rarr; Privacy &rarr; Request account
+          deletion</strong>. Confirm with <strong>Delete Everything</strong>. For an account created
+          with Apple, confirm with Apple when prompted. The app reports success only after the
+          server finishes deleting the account and associated content. If it fails, retry or
+          contact us.
         </p>
       </section>
 
@@ -27,8 +30,8 @@ export default function DeleteAccountPage() {
         <h2>Option 2: Request deletion by email</h2>
         <p>
           If you no longer have the app installed, email{' '}
-          <a href="mailto:support@homey.mt?subject=Account%20Deletion%20Request">
-            support@homey.mt
+          <a href={`mailto:${site.email}?subject=Account%20Deletion%20Request`}>
+            {site.email}
           </a>{' '}
           from the email address associated with your account, with the subject &ldquo;Account
           Deletion Request&rdquo;. We will verify your identity and process the request.
@@ -55,15 +58,16 @@ export default function DeleteAccountPage() {
       <section>
         <h2>Timeline</h2>
         <p>
-          Deletion requests are confirmed and fully processed within 30 days. See our{' '}
+          In-app deletion is completed before the app confirms success. For requests sent by
+          email, we verify account ownership and process the request after that. See our{' '}
           <a href="/privacy">Privacy Policy</a> for details on data retention.
         </p>
       </section>
 
       <div className="contact">
         <p>Need help with your deletion request?</p>
-        <a className="button" href="mailto:support@homey.mt?subject=Account%20Deletion%20Request">
-          Email support@homey.mt
+        <a className="button" href={`mailto:${site.email}?subject=Account%20Deletion%20Request`}>
+          Email {site.email}
         </a>
       </div>
     </div>
