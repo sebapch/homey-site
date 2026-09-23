@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { site } from '../site';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -87,8 +88,8 @@ export default function TermsPage() {
 
       <div className="contact">
         <p>Questions about our Terms?</p>
-        <a className="button" href="mailto:legal@homey.mt">
-          Contact legal@homey.mt
+        <a className="button" href={`mailto:${site.legalEmail}`}>
+          Contact {site.legalEmail}
         </a>
       </div>
     </div>

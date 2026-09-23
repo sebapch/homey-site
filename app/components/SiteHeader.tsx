@@ -12,7 +12,7 @@ export function SiteHeader() {
 
         <nav className="site-nav">
           <Link href="/#how">How it works</Link>
-          <Link href="/#owners">List a property</Link>
+          <Link href="/#owners">For owners</Link>
           <Link href="/#faq">FAQ</Link>
           <a className="btn btn-primary btn-sm" href={anyStoreLive ? '/#get' : notifyMailto}>
             {anyStoreLive ? 'Get the app' : 'Get notified'}

@@ -33,11 +33,11 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Homey — Property in Malta, without the middleman',
+    default: 'Homey — Property in Malta, direct',
     template: '%s — Homey',
   },
   description:
-    'Homey is a property app for Malta. Browse what is on the market, save what you like, and message whoever posted the listing. No commission, no hidden fees.',
+    'Browse, list and message directly with Homey, a property app for Malta and Gozo. No commission and no hidden fees.',
   keywords: [
     'Malta property',
     'Malta real estate',
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: 'en_MT',
     url: site.url,
-    title: 'Homey — Property in Malta, without the middleman',
+    title: 'Homey — Property in Malta, direct',
     description:
-      'Browse what is on the market in Malta, save what you like, and message whoever posted the listing. No commission, no hidden fees.',
+      'Browse, list and message directly across Malta and Gozo. No commission and no hidden fees.',
     images: [
       {
         url: '/brand/og-banner.png',
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Homey — Property in Malta, without the middleman',
+    title: 'Homey — Property in Malta, direct',
     description:
-      'Browse what is on the market in Malta and message whoever posted the listing. No commission, no hidden fees.',
+      'Browse, list and message directly across Malta and Gozo. No commission and no hidden fees.',
     images: ['/brand/og-banner.png'],
   },
   robots: { index: true, follow: true },

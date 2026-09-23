@@ -7,14 +7,11 @@ export const site = {
   name: 'Homey',
   tagline: 'Buy, sell and rent property in Malta — direct with the person who listed it.',
 
-  /**
-   * Canonical origin. Swap this one line when homeyappmlt.com is connected in
-   * Vercel; sitemap, robots and Open Graph all follow it.
-   */
-  url: 'https://homey-site.vercel.app',
+  /** Canonical origin for sitemap, robots and Open Graph. */
+  url: 'https://www.homeyappmlt.com',
 
   email: 'heyhomeymlt@gmail.com',
-  legalEmail: 'legal@homey.mt',
+  legalEmail: 'heyhomeymlt@gmail.com',
 
   /**
    * The app is not live in either store yet (Play Console loaded but not
